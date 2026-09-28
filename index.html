@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SMALLTALK LABORATORY — Programming the Personal Computer</title>
+<style>
+:root{
+  --paper:#f0f0e8; --ink:#171717; --muted:#555; --line:#222; --panel:#d9d9d1;
+}
+*{box-sizing:border-box;border-radius:0}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:"Times New Roman",Times,serif;line-height:1.38;
+}
+.page{max-width:1060px;margin:0 auto;padding:18px}
+.masthead{border:2px solid var(--line);padding:6px 10px;display:flex;justify-content:space-between;font-family:"Courier New",monospace;font-size:12px}
+.hero{border:2px solid var(--line);border-top:0;padding:22px 24px 18px;background:#e5e5dd}
+.kicker{font-family:"Courier New",monospace;font-size:12px;letter-spacing:1px}
+h1{font-family:"Courier New",monospace;font-size:clamp(26px,4.5vw,40px);line-height:1;margin:10px 0 8px}
+h2{font-family:"Courier New",monospace;font-size:19px;margin:0 0 8px}
+h3{font-family:"Courier New",monospace;font-size:14px}
+.lead{font-size:17px;max-width:680px}
+.button{display:inline-block;border:2px solid var(--line);background:#111;color:#f4f4ed;padding:5px 10px;font-family:"Courier New",monospace;font-size:13px;text-decoration:none;margin-top:8px}
+.grid{display:grid;grid-template-columns:1.1fr .9fr;gap:14px;margin-top:14px}
+.panel{border:2px solid var(--line);background:var(--paper);padding:14px}
+.panel.dark{background:#181818;color:#f2f2e9}
+.note{font-family:"Courier New",monospace;font-size:11px;color:var(--muted)}
+.dark .note{color:#cfcfc6}
+.diagram{border:1px solid var(--line);padding:10px;margin-top:10px;background:#ecece4}
+.schematic{display:block;width:100%;height:auto;border:1px solid #111}
+.screen{border:2px solid #111;background:#cfcfc7;padding:8px;margin-top:12px}
+.screenbar{border:1px solid #111;background:#eee;padding:3px 4px;font-family:"Courier New",monospace;font-size:11px}
+.window{border:1px solid #111;margin-top:6px;padding:8px;background:#e9e9e1;min-height:130px}
+.windowhead{background:#111;color:#fff;padding:3px 6px;font-family:"Courier New",monospace;font-size:11px}
+.mono{font-family:"Courier New",monospace}
+.course{display:grid;grid-template-columns:44px 1fr;gap:10px;border-top:1px solid var(--line);padding:8px 0;font-size:15px}
+.num{font-family:"Courier New",monospace;font-weight:bold}
+table.tech{border-collapse:collapse;width:100%;margin-top:10px;font-family:"Courier New",monospace;font-size:12px}
+table.tech td{border:1px solid var(--line);padding:4px 6px}
+.quote{font-size:19px;line-height:1.25;border-left:4px solid var(--line);padding-left:12px;margin:12px 0}
+.form{font-family:"Courier New",monospace;border:2px solid var(--line);padding:14px;background:#ddd;font-size:14px}
+footer{border-top:2px solid var(--line);margin-top:24px;padding:12px 0;font-size:11px;font-family:"Courier New",monospace}
+@media(max-width:760px){.grid{grid-template-columns:1fr}h1{font-size:26px}.page{padding:10px}.hero{padding:16px 12px}}
+</style>
+</head>
+<body>
+<main class="page">
+  <div class="masthead">
+    <span>SMALLTALK LABORATORY</span>
+    <span>PERSONAL COMPUTING / 1983</span>
+  </div>
+
+  <section class="hero">
+    <div class="kicker">PROGRAMMING THE PERSONAL COMPUTER</div>
+    <h1>SMALLTALK</h1>
+    <p class="lead">A course in objects, messages and interactive programming — for the computer environment that is still becoming.</p>
+    <a class="button" href="#program">VIEW THE PROGRAM -&gt;</a>
+    <p class="note">A fictional course advertisement created as a historical study.</p>
+  </section>
+
+  <section class="grid">
+    <article class="panel">
+      <h2>What is Smalltalk?</h2>
+      <p>Smalltalk developed at Xerox PARC as both a programming language and an interactive environment. Its object-oriented model treats programs as cooperating objects that communicate by sending messages.</p>
+      <div class="diagram">
+        <img class="schematic" src="assets/images/object-message-diagram.svg" alt="OBJECT A sends a MESSAGE to OBJECT B">
+        <p class="note">A program as a system of interacting objects. Schematic: OBJECT A -&gt; MESSAGE -&gt; OBJECT B; a simple conceptual diagram — not a historical screen.</p>
+      </div>
+    </article>
+
+    <article class="panel dark">
+      <h2>THE IDEA</h2>
+      <p class="quote">Do not study a program only as text. Work with it as a living system of objects.</p>
+      <p>Smalltalk made programming, execution and experimentation part of one environment.</p>
+      <p class="note">Conceptual summary based on the historical research in this project.</p>
+    </article>
+  </section>
+
+  <section class="grid" id="alto">
+    <article class="panel">
+      <h2>THE ALTO ENVIRONMENT</h2>
+      <p>Smalltalk became closely associated with the Xerox Alto: a research workstation with a bitmap display, mouse, networking and local magnetic storage.</p>
+      <div class="screen">
+        <div class="screenbar">SMALLTALK WORKSPACE — Xerox Alto / research workstation</div>
+        <div class="window">
+          <div class="windowhead">WORKSPACE</div>
+          <p class="mono">Object new<br>  open<br><br>Message → Object → Response</p>
+        </div>
+      </div>
+      <p class="note">Stylized reconstruction for this project; not a screenshot of the original system.</p>
+    </article>
+
+    <article class="panel">
+      <h2>ALTO / TECHNICAL NOTES</h2>
+      <p class="mono" style="font-size:13px">DISPLAY: bitmap, monochrome, 600&times;800.<br>
+      INPUT: mouse. STORAGE: local magnetic packet.<br>
+      NETWORK: local research resources.</p>
+      <p>In the selected period, a computer could be imagined as a personal working environment rather than only a remote terminal connected to a large machine.</p>
+      <table class="tech">
+        <tr><td>1972</td><td>Early Smalltalk</td></tr>
+        <tr><td>1976</td><td>Smalltalk-76</td></tr>
+        <tr><td>1980&ndash;83</td><td>Smalltalk-80, wider exposure</td></tr>
+      </table>
+      <p class="note">Machine data after era.md and the Alto archive; chronology after research.md.</p>
+    </article>
+  </section>
+
+  <section class="panel" id="program" style="margin-top:18px">
+    <h2>THE COURSE PROGRAM</h2>
+    <p class="note">Fictional curriculum designed for the historical concept.</p>
+    <p class="note">Audience: engineers, teachers and researchers working with personal workstations.</p>
+    <div class="course"><div class="num">01</div><div><b>OBJECTS</b><br>Learn to describe a program as a collection of interacting objects.</div></div>
+    <div class="course"><div class="num">02</div><div><b>MESSAGES</b><br>Explore how objects communicate and request actions.</div></div>
+    <div class="course"><div class="num">03</div><div><b>CLASSES</b><br>Work with the structures used to describe families of objects.</div></div>
+    <div class="course"><div class="num">04</div><div><b>THE INTERACTIVE ENVIRONMENT</b><br>Experiment with code while remaining inside the development environment.</div></div>
+    <div class="course"><div class="num">05</div><div><b>BUILDING A SMALL PERSONAL SYSTEM</b><br>Combine the ideas into a working experimental environment.</div></div>
+  </section>
+
+  <section class="grid">
+    <article class="panel dark">
+      <h2>A DYNAMIC MEDIUM</h2>
+      <p>Smalltalk was imagined in the context of the Dynabook: Alan Kay's concept of a personal dynamic computer as a medium for learning, modelling and creating. It belongs to a wider PARC effort to build software for such a machine.</p>
+      <p class="quote">Not only calculate. Explore.</p>
+      <p class="note">The Dynabook was a concept, not a mass-market product.</p>
+    </article>
+    <article class="panel">
+      <h2>SMALLTALK-80</h2>
+      <p>By the early 1980s Smalltalk-80 helped carry the project beyond its original research environment. A 1981 BYTE special issue introduced the system to a broader programming audience, and the 1983 book by Adele Goldberg and David Robson documented the language and its implementation.</p>
+      <div class="form" style="font-size:12px">
+        BYTE SPECIAL ISSUE / 1981<br>
+        SMALLTALK-80: THE LANGUAGE AND ITS IMPLEMENTATION / 1983<br>
+        <hr>
+        LANGUAGE + ENVIRONMENT + OBJECTS
+      </div>
+    </article>
+  </section>
+
+  <section class="panel" style="margin-top:18px">
+    <h2>ENTER THE LABORATORY</h2>
+    <p class="lead">Try programming as though the personal computer has already become a dynamic medium.</p>
+    <div class="form">
+      NAME _______________________________<br><br>
+      LAB ________________________________<br><br>
+      START ______________________________
+    </div>
+    <p class="note">Smalltalk Laboratory is a fictional organization created for this student historical project. No real course is being advertised.</p>
+  </section>
+
+  <footer>
+    HISTORICAL PROJECT / VARIANT 10 / SMALLTALK / 1972–1983<br>
+    Facts and visual references are documented in research.md, era.md and sources.md.
+  </footer>
+</main>
+</body>
+</html>
