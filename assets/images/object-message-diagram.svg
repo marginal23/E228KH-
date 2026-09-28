@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="220" viewBox="0 0 900 220">
+<rect width="900" height="220" fill="#eeeeE6"/>
+<rect x="50" y="70" width="210" height="80" fill="#d8d8d0" stroke="#111" stroke-width="4"/>
+<rect x="640" y="70" width="210" height="80" fill="#d8d8d0" stroke="#111" stroke-width="4"/>
+<text x="155" y="118" text-anchor="middle" font-family="monospace" font-size="22">OBJECT A</text>
+<text x="745" y="118" text-anchor="middle" font-family="monospace" font-size="22">OBJECT B</text>
+<path d="M280 110 H620" stroke="#111" stroke-width="4"/>
+<path d="M600 96 L625 110 L600 124" fill="none" stroke="#111" stroke-width="4"/>
+<text x="450" y="90" text-anchor="middle" font-family="monospace" font-size="18">MESSAGE</text>
+</svg>
